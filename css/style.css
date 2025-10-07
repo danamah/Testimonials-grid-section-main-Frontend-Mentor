@@ -1,0 +1,130 @@
+body{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: #ECF2F8;
+}
+
+div.container{
+    display: grid;
+    grid-template-columns: repeat(8,auto);
+    grid-template-rows: auto;
+    grid-template-areas: "block-1 block-1 block-1 block-1 block-2 block-2 block-5 block-5" 
+                        "block-1 block-1 block-1 block-1 block-2 block-2 block-5 block-5"
+                        "block-1 block-1 block-1 block-1 block-2 block-2 block-5 block-5"
+                        "block-3 block-3 block-4 block-4 block-4 block-4 block-5 block-5"
+                        "block-3 block-3 block-4 block-4 block-4 block-4 block-5 block-5"
+                        ;
+    gap: 25px;
+}
+div.container .blo{
+    padding-inline: 25px;
+    padding-block: 15px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+   box-shadow: 32px 35px 18px 4px rgba(0, 0, 0, 0.15);
+   z-index: 1;
+}
+@media screen and (max-width:992px) {
+    div.container{
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: auto;
+    grid-template-areas: "block-1 block-1" "block-2 block-5"  "block-3 block-5" "block-4 block-4";
+    gap: 25px;
+}
+}
+@media screen and (max-width:678px) {
+    div.container{
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: auto;
+    grid-template-areas: "block-1" "block-2"  "block-3" "block-4" "block-5";
+    gap: 25px;
+}
+}
+div.container .blo .image{
+    width:56px;
+    height: 56px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+}
+div.container .blo header .text h2{
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+}
+div.container .blo.blo-5 header .text h2,
+div.container .blo.blo-3 header .text h2
+{
+    color: rgb(72, 85, 106);
+}
+div.container .blo header .text p{
+    font-size: 11px;
+    font-weight: 500;
+    color: white;
+    opacity: 0.5;
+}
+div.container .blo.blo-5 header .text p,
+div.container .blo.blo-3 header .text p{
+    color: rgb(72, 85, 106);
+    opacity: 0.5;
+}
+div.container .blo article p:first-child{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+div.container .blo.blo-5 article p:first-child,
+div.container .blo.blo-3 article p:first-child{
+    color: rgb(72, 85, 106);
+}
+div.container .blo article p:nth-child(2){
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    opacity: 0.5;
+    line-height: 1.8;
+}
+div.container .blo.blo-5 article p:nth-child(2),
+div.container .blo.blo-3 article p:nth-child(2){
+    color: rgb(72, 85, 106);
+    opacity: 0.5;
+}
+div.container .blo.blo-1{
+    grid-area: block-1;
+    background-color: #7541C8;
+    position: relative;
+}
+div.container .blo.blo-1 .svg{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    z-index: -1;
+}
+div.container .blo.blo-2{
+    grid-area: block-2;
+    background-color: #48556A;
+}
+div.container .blo.blo-3{
+    grid-area: block-3;
+    background-color: #FFFFFF;
+}
+div.container .blo.blo-4{
+    grid-area: block-4;
+    background-color: #19212E;
+}
+div.container .blo.blo-5{
+    grid-area: block-5;
+    background-color: #FFFFFF;
+    color: black;
+}
+div.container .blo.blo-1 .image{
+    border: 2px solid #A775F1;
+}
+div.container .blo.blo-4 .image{
+    border: 2px solid #7541C8;
+}
